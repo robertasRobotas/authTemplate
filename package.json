@@ -1,0 +1,29 @@
+{
+  "name": "authTemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "front": "cd front && npm start",
+    "back": "cd back && npm start",
+    "dev": "concurrently \"npm run back\" \"npm run front\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertasRobotas/authTemplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertasRobotas/authTemplate/issues"
+  },
+  "homepage": "https://github.com/robertasRobotas/authTemplate#readme",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express-session": "^1.17.0"
+  }
+}
