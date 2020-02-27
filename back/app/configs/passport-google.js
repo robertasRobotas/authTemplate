@@ -7,9 +7,10 @@ passport.serializeUser((user,done)=>{
   done(null, user.id);
 });
 
-passport.deserializeUser((user,done)=>{
-  UserSchema.findOne({id:user.id}).then((user)=>{
-    done(null, user.id);
+passport.deserializeUser((id,done)=>{
+
+  UserSchema.findOne({id}).then((user)=>{
+    done(null, user);
   });
 });
 
@@ -18,9 +19,9 @@ passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     callbackURL: 'http://localhost:8085/user/auth/google/callback'
-  }, (accessToken, refreshToken, profile, done) =>{
+  }, async (accessToken, refreshToken, profile, done) =>{
     
-   UserSchema.findOne({email: profile._json.email}).then((findUser)=>{
+   const findUser = await UserSchema.findOne({email: profile._json.email});
 
     if(!findUser)
     {
@@ -31,14 +32,11 @@ passport.use(new GoogleStrategy({
        picture: profile._json.picture
    });
  
-    user.save().then(()=>{
+     await user.save();
      done(null, user);
-    });
  
     }else{
- console.log(findUser);
- console.log(accessToken);
- console.log(refreshToken);
+
       try{  
         done(null, findUser)
       }catch(e){
@@ -46,10 +44,6 @@ passport.use(new GoogleStrategy({
       }
 
     }
-
-
-   });
-
 
   }
 ));

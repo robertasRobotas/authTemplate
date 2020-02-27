@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const app = express();
 const userRoute = require('./app/routes/user');
 const passport = require('passport');
+const cookieSession = require('express-session');
+
 
  mongoose.connect(process.env.MONGO_LINK_MLAB, {
   useNewUrlParser: true,
@@ -21,7 +23,7 @@ app.use((req, res,next)=>{
     next();
 });
 
-app.use(require('express-session')({
+app.use(cookieSession({
   secret: 'keyboard cat',
   resave: true,
   saveUninitialized: true
