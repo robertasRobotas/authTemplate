@@ -1,1 +1,3 @@
-# To launch all(2) server: "npm run dev"
+# npm i in 'back' and 'front folders'
+
+# To launch all servers: "npm run dev"
