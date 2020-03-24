@@ -1,1 +1,1 @@
-# To launch all server: "npm run dev"
+# To launch all(2) server: "npm run dev"
