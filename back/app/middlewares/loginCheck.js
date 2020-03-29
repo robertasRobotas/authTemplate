@@ -1,5 +1,5 @@
 const isLoggedIn = (req, res, next) => {
-  if (req.session.user !== undefined) {
+  if (req.user !== undefined) {
     next();
   } else {
     res.redirect('/login');

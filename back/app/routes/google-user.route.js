@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const googlePassportSetup = require('../configs/passport-google');
+const isLoggedIn = require('../middlewares/loginCheck');
 
-router.get('/redirect', (req, res) => {
+router.get('/redirect', isLoggedIn, (req, res) => {
   console.log(' req.session', req.session);
   console.log(' req.user', req.user);
 
