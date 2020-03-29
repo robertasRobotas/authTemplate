@@ -23,7 +23,6 @@ router.get(
   '/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
-    console.log(' req.session', req.session);
     res.redirect(process.env.REDIRECT_AFTER_LOGIN);
   }
 );
