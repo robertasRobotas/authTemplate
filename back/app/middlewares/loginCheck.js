@@ -2,7 +2,7 @@ const isLoggedIn = (req, res, next) => {
   if (req.user !== undefined) {
     next();
   } else {
-    res.redirect('/login');
+    res.status(401).json({ text: 'unauthorized' });
   }
 };
 
