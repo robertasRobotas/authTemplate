@@ -4,8 +4,10 @@ const passport = require('passport');
 const googlePassportSetup = require('../configs/passport-google');
 
 router.get('/redirect', (req, res) => {
-  console.log('redirect');
-  return res.redirect('http://nodejs.org');
+  console.log(' req.session', req.session);
+  console.log(' req.user', req.user);
+
+  return res.status(200).json({ text: 'ok' });
 });
 
 router.get(
@@ -21,6 +23,7 @@ router.get(
   '/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
+    console.log(' req.session', req.session);
     res.redirect(process.env.REDIRECT_AFTER_LOGIN);
   }
 );

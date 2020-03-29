@@ -2,6 +2,13 @@ import React from 'react';
 import axios from 'axios';
 
 function App() {
+  const apiCall = () => {
+    axios
+      .get('http://localhost:8085/user/redirect', { withCredentials: true })
+      .then((res) => {
+        console.log(res);
+      });
+  };
   return (
     <div className='App'>
       <a
@@ -17,6 +24,22 @@ function App() {
         style={{
           display: 'block',
           backgroundColor: 'blue',
+          width: '100px',
+          height: '100px'
+        }}></a>
+      <a
+        href='http://localhost:8085/user/redirect'
+        style={{
+          display: 'block',
+          backgroundColor: 'green',
+          width: '100px',
+          height: '100px'
+        }}></a>
+      <a
+        onClick={apiCall}
+        style={{
+          display: 'block',
+          backgroundColor: 'black',
           width: '100px',
           height: '100px'
         }}></a>
