@@ -1,19 +1,8 @@
-const UserSchema = require('../models/user');
-
 const passport = require('passport');
 const { findExistingUserOrAddToDB } = require('../helpers/user.helper');
+const serializeDeserialize = require('./serialization');
 
-var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-
-passport.serializeUser((user, done) => {
-  done(null, user.id);
-});
-
-passport.deserializeUser((id, done) => {
-  UserSchema.findOne({ id }).then((user) => {
-    done(null, user);
-  });
-});
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 passport.use(
   new GoogleStrategy(
