@@ -12,6 +12,7 @@ passport.use(
       callbackURL: process.env.FACEBOOK_CALLBACK_LINK
     },
     async (accessToken, refreshToken, profile, done) => {
+      console.log('profile', profile);
       const user = await findExistingUserOrAddToDB(profile);
       done(null, user);
     }

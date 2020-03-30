@@ -5,9 +5,9 @@ const facebookPassportSetup = require('../configs/passport-facebook');
 const isLoggedIn = require('../middlewares/loginCheck');
 
 router.get(
-  '/auth/facebook',
+  '/auth',
   passport.authenticate('facebook', {
-    scope: ['read_stream', 'publish_actions']
+    scope: []
   })
 );
 
