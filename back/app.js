@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
-const googleUserRoute = require('./app/routes/google-user.route');
+const { initializeRoutes } = require('./routes');
 const passport = require('passport');
 const cookieSession = require('express-session');
 
@@ -36,6 +36,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/user', googleUserRoute);
+app.use(initializeRoutes());
 
 module.exports = app;

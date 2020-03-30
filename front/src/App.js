@@ -23,15 +23,7 @@ function App() {
         href='http://localhost:8085/user/logout'
         style={{
           display: 'block',
-          backgroundColor: 'blue',
-          width: '100px',
-          height: '100px'
-        }}></a>
-      <a
-        href='http://localhost:8085/user/redirect'
-        style={{
-          display: 'block',
-          backgroundColor: 'green',
+          backgroundColor: 'grey',
           width: '100px',
           height: '100px'
         }}></a>
@@ -43,6 +35,16 @@ function App() {
           width: '100px',
           height: '100px'
         }}></a>
+      <a
+        href='http://localhost:8085/user/auth/facebook'
+        style={{
+          display: 'block',
+          backgroundColor: 'blue',
+          width: '100px',
+          height: '100px'
+        }}>
+        facebook
+      </a>
     </div>
   );
 }
