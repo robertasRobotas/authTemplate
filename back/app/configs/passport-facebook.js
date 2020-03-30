@@ -9,7 +9,7 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-      callbackURL: 'http://www.example.com/auth/facebook/callback'
+      callbackURL: process.env.FACEBOOK_CALLBACK_LINK
     },
     async (accessToken, refreshToken, profile, done) => {
       const user = await findExistingUserOrAddToDB(profile);

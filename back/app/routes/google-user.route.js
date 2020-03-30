@@ -12,7 +12,7 @@ router.get('/redirect', isLoggedIn, (req, res) => {
 });
 
 router.get(
-  '/auth/google',
+  '/auth',
   passport.authenticate('google', {
     scope: [
       'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email'
@@ -21,7 +21,7 @@ router.get(
 );
 
 router.get(
-  '/auth/google/callback',
+  '/auth/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect(process.env.REDIRECT_AFTER_LOGIN);

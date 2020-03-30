@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='App'>
       <a
-        href='http://localhost:8085/user/auth/google'
+        href='http://localhost:8085/google/auth'
         style={{
           display: 'block',
           backgroundColor: 'red',
@@ -20,7 +20,7 @@ function App() {
           height: '100px'
         }}></a>
       <a
-        href='http://localhost:8085/user/logout'
+        href='http://localhost:8085/google/logout'
         style={{
           display: 'block',
           backgroundColor: 'grey',
@@ -36,7 +36,7 @@ function App() {
           height: '100px'
         }}></a>
       <a
-        href='http://localhost:8085/user/auth/facebook'
+        href='http://localhost:8085/facebook/auth'
         style={{
           display: 'block',
           backgroundColor: 'blue',
