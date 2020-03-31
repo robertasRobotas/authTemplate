@@ -7,7 +7,7 @@ const isLoggedIn = require('../middlewares/loginCheck');
 router.get(
   '/auth',
   passport.authenticate('facebook', {
-    scope: []
+    scope: ['public_profile,email,user_friends']
   })
 );
 
