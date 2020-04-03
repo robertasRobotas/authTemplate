@@ -6,24 +6,17 @@ import {
 } from 'react-social-login-buttons';
 
 function Login() {
-  const apiCall = () => {
-    axios
-      .get('http://localhost:8085/user/redirect', { withCredentials: true })
-      .then((res) => {
-        console.log(res);
-      });
-  };
+  const style = { textDecoration: 'none' };
   return (
-    <div className='App'>
-      <a href='http://localhost:8085/google/auth'>
+    <>
+      <a style={style} href='http://localhost:8085/google/auth'>
         <GoogleLoginButton />
       </a>
 
-      <a href='http://localhost:8085/facebook/auth'>
+      <a style={style} href='http://localhost:8085/facebook/auth'>
         <FacebookLoginButton />
       </a>
-      <div id='my-signin2'></div>
-    </div>
+    </>
   );
 }
 
