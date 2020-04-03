@@ -25,6 +25,8 @@
   "dependencies": {
     "cookie-parser": "^1.4.4",
     "express-session": "^1.17.0",
-    "passport-facebook": "^3.0.0"
+    "passport-facebook": "^3.0.0",
+    "react-router-dom": "^5.1.2",
+    "react-social-login-buttons": "^3.0.0"
   }
 }
