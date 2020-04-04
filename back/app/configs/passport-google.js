@@ -9,12 +9,16 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: process.env.GOOGLE_CALLBACK_LINK
+      callbackURL: process.env.GOOGLE_CALLBACK_LINK,
     },
     async (accessToken, refreshToken, profile, done) => {
-      console.log('profile', profile);
-
-      const user = await findExistingUserOrAddToDB(profile);
+      const userDataTransform = {
+        email: profile._json.email,
+        name: profile._json.name,
+        picture: profile._json.picture,
+        id: profile._json.sub,
+      };
+      const user = await findExistingUserOrAddToDB(userDataTransform);
       console.log(user);
       done(null, user);
     }

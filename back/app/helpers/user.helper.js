@@ -1,14 +1,14 @@
 const UserSchema = require('../models/user');
 
 const findExistingUserOrAddToDB = async (profile) => {
-  const findUser = await UserSchema.findOne({ email: profile._json.email });
+  const findUser = await UserSchema.findOne({ email: profile.email });
 
   if (!findUser) {
     const user = new UserSchema({
-      displayName: profile.displayName,
-      email: profile._json.email,
+      displayName: profile.name,
+      email: profile.email,
       id: profile.id,
-      picture: profile._json.picture
+      picture: profile.picture,
     });
 
     await user.save();

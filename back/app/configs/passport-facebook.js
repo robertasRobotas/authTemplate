@@ -10,11 +10,16 @@ passport.use(
       clientID: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
       callbackURL: process.env.FACEBOOK_CALLBACK_LINK,
-      profileFields: ['email', 'name', 'photos']
+      profileFields: ['email', 'name', 'photos'],
     },
     async (accessToken, refreshToken, profile, done) => {
-      console.log('profile', profile);
-      const user = await findExistingUserOrAddToDB(profile);
+      const userDataTransform = {
+        email: profile._json.email,
+        name: `${profile._json.first_name} ${profile._json.last_name}`,
+        picture: profile._json.picture.data.url,
+      };
+
+      const user = await findExistingUserOrAddToDB(userDataTransform);
       done(null, user);
     }
   )
