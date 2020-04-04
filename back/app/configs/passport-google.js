@@ -19,7 +19,6 @@ passport.use(
         id: profile._json.sub,
       };
       const user = await findExistingUserOrAddToDB(userDataTransform);
-      console.log(user);
       done(null, user);
     }
   )
