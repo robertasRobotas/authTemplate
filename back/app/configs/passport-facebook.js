@@ -17,6 +17,7 @@ passport.use(
         email: profile._json.email,
         name: `${profile._json.first_name} ${profile._json.last_name}`,
         picture: profile._json.picture.data.url,
+        id: profile._json.id,
       };
 
       const user = await findExistingUserOrAddToDB(userDataTransform);

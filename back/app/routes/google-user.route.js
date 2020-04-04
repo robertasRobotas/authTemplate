@@ -15,15 +15,15 @@ router.get(
   '/auth',
   passport.authenticate('google', {
     scope: [
-      'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email'
-    ]
+      'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email',
+    ],
   })
 );
 
 router.get(
   '/auth/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
-  function(req, res) {
+  function (req, res) {
     res.redirect(process.env.REDIRECT_AFTER_LOGIN);
   }
 );

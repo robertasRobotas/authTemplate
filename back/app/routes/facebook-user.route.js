@@ -7,16 +7,18 @@ const isLoggedIn = require('../middlewares/loginCheck');
 router.get(
   '/auth',
   passport.authenticate('facebook', {
-    scope: ['public_profile,email,user_friends']
+    scope: ['public_profile,email,user_friends'],
   })
 );
 
 router.get(
   '/auth/callback',
   passport.authenticate('facebook', {
-    successRedirect: '/',
-    failureRedirect: '/login'
-  })
+    failureRedirect: '/login',
+  }),
+  function (req, res) {
+    res.redirect(process.env.REDIRECT_AFTER_LOGIN);
+  }
 );
 
 module.exports = router;
