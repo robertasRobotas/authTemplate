@@ -4,13 +4,6 @@ const passport = require('passport');
 const googlePassportSetup = require('../configs/passport-google');
 const isLoggedIn = require('../middlewares/loginCheck');
 
-router.get('/redirect', isLoggedIn, (req, res) => {
-  console.log(' req.session', req.session);
-  console.log(' req.user', req.user);
-
-  return res.status(200).json({ text: 'ok' });
-});
-
 router.get(
   '/auth',
   passport.authenticate('google', {
@@ -22,6 +15,10 @@ router.get(
 
 router.get(
   '/auth/callback',
+  (req, res, next) => {
+    logger('LOGGED IN');
+    next();
+  },
   passport.authenticate('google', { failureRedirect: '/login' }),
   function (req, res) {
     res.redirect(process.env.REDIRECT_AFTER_LOGIN);

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const facebookPassportSetup = require('../configs/passport-facebook');
-const isLoggedIn = require('../middlewares/loginCheck');
+const { logger } = require('../helpers/logger.helper');
 
 router.get(
   '/auth',
@@ -13,6 +13,10 @@ router.get(
 
 router.get(
   '/auth/callback',
+  (req, res, next) => {
+    logger('LOGGED IN');
+    next();
+  },
   passport.authenticate('facebook', {
     failureRedirect: '/login',
   }),

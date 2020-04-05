@@ -12,7 +12,7 @@ const call = () => {
 const Main = () => {
   return (
     <>
-      MAIN PAGE <div onClick={call}>aaaaa</div>
+      MAIN PAGE <button onClick={call}>aaaaa</button>
     </>
   );
 };
