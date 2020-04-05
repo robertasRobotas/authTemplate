@@ -4,14 +4,16 @@ import { getUserData } from '../apiCalls/user';
 
 const Main = () => {
   useEffect(() => {
-    getUserData().then((res) => {
-      console.log(res);
-    });
+    getUserData();
   }, []);
+
+  const userData = () => {
+    console.log(JSON.parse(localStorage.getItem('userData')));
+  };
 
   return (
     <>
-      MAIN PAGE <button>aaaaa</button>
+      MAIN PAGE <button onClick={userData}>Get user data</button>
     </>
   );
 };

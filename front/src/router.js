@@ -1,15 +1,16 @@
 import React from 'react';
 import axios from 'axios';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route, Router } from 'react-router-dom';
 import { Main, Login } from './pages';
+import history from './history';
 
-const Router = () => {
+const Routes = () => {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <Route path='/' exact component={Main} />
       <Route path='/login' exact component={Login} />
-    </BrowserRouter>
+    </Router>
   );
 };
 
-export default Router;
+export default Routes;
