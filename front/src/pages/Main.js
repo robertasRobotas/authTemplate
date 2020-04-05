@@ -4,7 +4,9 @@ import { getUserData } from '../apiCalls/user';
 
 const Main = () => {
   useEffect(() => {
-    getUserData();
+    getUserData().then((res) => {
+      console.log(res);
+    });
   }, []);
 
   return (
