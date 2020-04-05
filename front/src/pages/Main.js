@@ -1,18 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
-
-const call = () => {
-  axios
-    .get('http://localhost:8085/api/action/redirect', { withCredentials: true })
-    .then((res) => {
-      console.log(res);
-    });
-};
+import { getUserData } from '../apiCalls/user';
 
 const Main = () => {
+  useEffect(() => {
+    getUserData();
+  }, []);
+
   return (
     <>
-      MAIN PAGE <button onClick={call}>aaaaa</button>
+      MAIN PAGE <button>aaaaa</button>
     </>
   );
 };

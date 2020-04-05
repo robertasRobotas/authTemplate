@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const googlePassportSetup = require('../configs/passport-google');
-const isLoggedIn = require('../middlewares/loginCheck');
+const { logger } = require('../helpers/logger.helper');
 
 router.get(
   '/auth',
