@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const style = { backgroundColor: 'green', textDecoration: 'none' };
+const style = {
+  backgroundColor: 'green',
+  textDecoration: 'none',
+  padding: '6px',
+};
 
 const NavLink = ({ path, text }) => (
   <>

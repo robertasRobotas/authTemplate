@@ -9,12 +9,21 @@ const Tabs = styled.ul`
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(12, 1fr);
+  text-align: center;
+  padding-top: 1em;
+
+  background-color: blue;
 `;
 
-const NavBarTabs = ({ navLinks }) => (
+const NavBarTabs = ({ navLinks, pressedTab, setPressedTab }) => (
   <Tabs>
     {navLinks.map((link, i) => (
-      <Link path={link.path} text={link.text} />
+      <Link
+        path={link.path}
+        text={link.text}
+        pressedTab={pressedTab}
+        setPressedTab={setPressedTab}
+      />
     ))}
   </Tabs>
 );

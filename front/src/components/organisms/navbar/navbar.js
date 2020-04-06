@@ -13,7 +13,11 @@ const Navbar = () => {
   return (
     <>
       <Wrapper>
-        <Tabs navLinks={navLinks} />
+        <Tabs
+          navLinks={navLinks}
+          pressedTab={pressedTab}
+          setPressedTab={setPressedTab}
+        />
       </Wrapper>
     </>
   );

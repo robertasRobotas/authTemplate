@@ -5,11 +5,11 @@ const links = [
   },
   {
     path: '/about/',
-    text: 'About us',
+    text: 'About',
   },
   {
     path: '/contact/',
-    text: 'Contact us',
+    text: 'Contact',
   },
 ];
 
