@@ -1,14 +1,14 @@
 const links = [
   {
-    link: '/',
+    path: '/',
     text: 'Home',
   },
   {
-    link: '/about/',
+    path: '/about/',
     text: 'About us',
   },
   {
-    link: '/contact/',
+    path: '/contact/',
     text: 'Contact us',
   },
 ];

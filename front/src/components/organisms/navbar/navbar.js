@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import navbarLinks from './navbarLinks';
+import navLinks from './navLinks';
+import { Tabs } from '../../molecules';
 
 const Wrapper = styled.div`
   height: 4em;
@@ -8,18 +9,11 @@ const Wrapper = styled.div`
 `;
 
 const Navbar = () => {
+  const [pressedTab, setPressedTab] = useState();
   return (
     <>
       <Wrapper>
-        <ul>
-          {navbarLinks.map((objLink, i) => {
-            return (
-              <li>
-                <a href={objLink.link}>{objLink.text}</a>
-              </li>
-            );
-          })}
-        </ul>
+        <Tabs navLinks={navLinks} />
       </Wrapper>
     </>
   );
