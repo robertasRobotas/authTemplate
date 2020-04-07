@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NavLink = ({ path, text, pressedTab, setPressedTab }) => {
   let styles;
 
-  if (pressedTab === text) {
+  if (localStorage.getItem('currentLink') === text) {
     styles = {
       backgroundColor: 'green',
       textDecoration: 'none',
@@ -18,13 +18,17 @@ const NavLink = ({ path, text, pressedTab, setPressedTab }) => {
     };
   }
 
+  const setCurrentLink = ({ text }) => {
+    localStorage.setItem('currentLink', text);
+  };
+
   return (
     <>
       <Link
         style={styles}
         to={path}
         onClick={() => {
-          setPressedTab(text);
+          setCurrentLink({ text });
         }}>
         {text}
       </Link>
