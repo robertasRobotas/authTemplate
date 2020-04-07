@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from '../atoms';
 
@@ -19,6 +19,7 @@ const NavBarTabs = ({ navLinks, pressedTab, setPressedTab }) => (
   <Tabs>
     {navLinks.map((link, i) => (
       <Link
+        key={i}
         path={link.path}
         text={link.text}
         pressedTab={pressedTab}

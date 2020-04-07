@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavLink = ({ path, text, pressedTab, setPressedTab }) => {
   let styles;
 
-  if (localStorage.getItem('currentLink') === text) {
+  if (window.location.pathname === path) {
     styles = {
       backgroundColor: 'green',
       textDecoration: 'none',
       padding: '6px',
     };
+    localStorage.removeItem('currentLink', text);
   } else {
     styles = {
       backgroundColor: 'pink',
@@ -18,18 +19,9 @@ const NavLink = ({ path, text, pressedTab, setPressedTab }) => {
     };
   }
 
-  const setCurrentLink = ({ text }) => {
-    localStorage.setItem('currentLink', text);
-  };
-
   return (
     <>
-      <Link
-        style={styles}
-        to={path}
-        onClick={() => {
-          setCurrentLink({ text });
-        }}>
+      <Link style={styles} to={path}>
         {text}
       </Link>
     </>

@@ -1,7 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 import { Route, Router } from 'react-router-dom';
-import { Main, Login, About, Contact } from './pages';
+import { Main, Login, About, Contact } from './components/pages';
 import history from './history';
 
 const Routes = () => {
