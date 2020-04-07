@@ -4,11 +4,11 @@ const links = [
     text: 'Home',
   },
   {
-    path: '/about/',
+    path: '/about',
     text: 'About',
   },
   {
-    path: '/contact/',
+    path: '/contact',
     text: 'Contact',
   },
 ];
