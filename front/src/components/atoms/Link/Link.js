@@ -9,6 +9,7 @@ const NavLink = ({ path, text, pressedTab, setPressedTab }) => {
       backgroundColor: 'green',
       textDecoration: 'none',
       padding: '6px',
+      letterSpacing: '2px',
     };
     localStorage.removeItem('currentLink', text);
   } else {
@@ -16,6 +17,7 @@ const NavLink = ({ path, text, pressedTab, setPressedTab }) => {
       backgroundColor: 'pink',
       textDecoration: 'none',
       padding: '6px',
+      letterSpacing: '2px',
     };
   }
 
