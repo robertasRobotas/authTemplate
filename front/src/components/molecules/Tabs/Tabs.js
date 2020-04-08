@@ -15,7 +15,7 @@ const Tabs = styled.ul`
 
   @media only screen and (max-width: 600px) {
     /* For mobile phones: */
-    background-color: grey;
+    background-color: yellow;
     width: 100%;
   }
 `;
