@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from '../atoms';
+import { Link } from '../../atoms';
 
 const Tabs = styled.ul`
   margin: 0;
@@ -11,8 +11,13 @@ const Tabs = styled.ul`
   grid-template-columns: repeat(12, 1fr);
   text-align: center;
   padding-top: 1em;
-
   background-color: blue;
+
+  @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    background-color: grey;
+    width: 100%;
+  }
 `;
 
 const NavBarTabs = ({ navLinks, pressedTab, setPressedTab }) => (
