@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { getUserData } from '../../apiCalls/user';
-import Wrapper from '../../helpers/Wrapper';
+import { getUserData } from '../../../apiCalls/user';
+import Wrapper from '../../../helpers/Wrapper';
 
 const Main = () => {
   useEffect(() => {
