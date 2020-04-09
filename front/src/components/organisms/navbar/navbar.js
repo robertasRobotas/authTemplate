@@ -1,26 +1,15 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import navLinks from './navLinks';
-import { Tabs } from '../../molecules';
-
-const Wrapper = styled.div`
-  height: 4em;
-  background-color: brown;
-`;
+import React, { useState, useLayoutEffect } from 'react';
+import LargeNavigation from './LargeNavigation';
+import SmallNavigation from './SmallNavigation';
 
 const Navbar = () => {
-  const [pressedTab, setPressedTab] = useState();
-  return (
-    <>
-      <Wrapper>
-        <Tabs
-          navLinks={navLinks}
-          pressedTab={pressedTab}
-          setPressedTab={setPressedTab}
-        />
-      </Wrapper>
-    </>
-  );
+  const [windowSize, setWindowSize] = useState();
+  useLayoutEffect(() => {
+    console.log(window.innerWidth);
+    setWindowSize(window.innerWidth);
+  }, [window.innerWidth]);
+
+  return <>{windowSize > 600 ? <>a</> : <>b</>}</>;
 };
 
 export default Navbar;

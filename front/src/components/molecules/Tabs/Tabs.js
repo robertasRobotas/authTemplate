@@ -12,6 +12,7 @@ const Tabs = styled.ul`
   grid-template-columns: repeat(1, 1fr);
   text-align: center;
   padding-top: 1em;
+  padding-bottom: 1em;
   background-color: blue;
   justify-content: end;
 
@@ -35,7 +36,6 @@ const SmallMenuWrapper = styled.div`
     display: none;
   }
 `;
-
 const NavBarTabs = ({ navLinks, pressedTab, setPressedTab }) => {
   const [smallMenuStatus, setSmallMenu] = useState(false);
   return (
