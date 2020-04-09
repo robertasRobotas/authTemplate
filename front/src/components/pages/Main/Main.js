@@ -3,10 +3,6 @@ import { getUserData } from '../../../apiCalls/user';
 import Wrapper from '../../../helpers/Wrapper';
 
 const Main = () => {
-  useEffect(() => {
-    getUserData();
-  }, []);
-
   const userData = () => {
     console.log(JSON.parse(localStorage.getItem('userData')));
   };
