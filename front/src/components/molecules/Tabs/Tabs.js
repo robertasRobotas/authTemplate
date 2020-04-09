@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from '../../atoms';
-import burgerButton from '../../../assets/photos/Burger.png';
 
 const Tabs = styled.ul`
   display: grid;
@@ -24,26 +23,10 @@ const Tabs = styled.ul`
   }
 `;
 
-const BurgerImage = styled.img`
-  width: 1em;
-  height: 1em;
-  float: right;
-  margin-right: 1em;
-`;
-
-const SmallMenuWrapper = styled.div`
-  @media only screen and (min-width: 600px) {
-    display: none;
-  }
-`;
 const NavBarTabs = ({ navLinks, pressedTab, setPressedTab }) => {
-  const [smallMenuStatus, setSmallMenu] = useState(false);
   return (
     <>
       <Tabs>
-        <SmallMenuWrapper>
-          <BurgerImage src={burgerButton} alt='burger' />
-        </SmallMenuWrapper>
         {navLinks.map((link, i) => (
           <Link
             key={i}

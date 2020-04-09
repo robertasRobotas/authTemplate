@@ -1,15 +1,35 @@
-import React, { useState, useLayoutEffect } from 'react';
-import LargeNavigation from './LargeNavigation';
-import SmallNavigation from './SmallNavigation';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import navLinks from './navLinks';
+import { Tabs } from '../../molecules';
+import { Burger } from '../../atoms';
+
+const Wrapper = styled.div`
+  background-color: brown;
+`;
+
+const SmallMenuWrapper = styled.div`
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+`;
 
 const Navbar = () => {
-  const [windowSize, setWindowSize] = useState();
-  useLayoutEffect(() => {
-    console.log(window.innerWidth);
-    setWindowSize(window.innerWidth);
-  }, [window.innerWidth]);
+  const [menuStatus, setMenuStatus] = useState(false);
 
-  return <>{windowSize > 600 ? <>a</> : <>b</>}</>;
+  const changeMenuStatus = () => {
+    setMenuStatus(!menuStatus);
+    console.log(menuStatus);
+  };
+
+  return (
+    <>
+      <Wrapper>
+        <Burger changeMenuStatus={changeMenuStatus} />
+        <Tabs navLinks={navLinks} />
+      </Wrapper>
+    </>
+  );
 };
 
 export default Navbar;
