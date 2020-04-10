@@ -1,0 +1,10 @@
+a {
+  margin: 2em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  a {
+    margin: 1em;
+  }
+}
