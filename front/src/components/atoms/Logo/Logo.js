@@ -1,7 +1,7 @@
 import React from 'react';
 import './Logo.css';
 
-const Logo = ({ changeMenuStatus }) => {
+const Logo = () => {
   return <div>LOGO</div>;
 };
 

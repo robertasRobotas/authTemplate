@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import navLinks from './navLinks';
 import { Tabs } from '../../molecules';
-import { Burger } from '../../atoms';
+import { Burger, Logo } from '../../atoms';
 
 const Wrapper = styled.div`
   display: grid;
@@ -22,6 +22,7 @@ const Navbar = () => {
   return (
     <>
       <Wrapper>
+        <Logo />
         <Burger changeMenuStatus={changeMenuStatus} />
         <Tabs navLinks={navLinks} menuStatus={menuStatus} />
       </Wrapper>
