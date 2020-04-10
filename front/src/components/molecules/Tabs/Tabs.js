@@ -14,27 +14,23 @@ const Tabs = styled.ul`
   padding-bottom: 1em;
   background-color: blue;
   justify-content: end;
+  padding-top: 3em;
 
   @media only screen and (min-width: 600px) {
     /* For mobile phones: */
     background-color: yellow;
     width: 100%;
     grid-template-columns: repeat(12, 1fr);
+    padding-top: 1em;
   }
 `;
 
-const NavBarTabs = ({ navLinks, pressedTab, setPressedTab }) => {
+const NavBarTabs = ({ navLinks, menuStatus }) => {
   return (
     <>
       <Tabs>
         {navLinks.map((link, i) => (
-          <Link
-            key={i}
-            path={link.path}
-            text={link.text}
-            pressedTab={pressedTab}
-            setPressedTab={setPressedTab}
-          />
+          <Link key={i} path={link.path} text={link.text} />
         ))}
       </Tabs>
     </>

@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <Wrapper>
         <Burger changeMenuStatus={changeMenuStatus} />
-        <Tabs navLinks={navLinks} />
+        <Tabs navLinks={navLinks} menuStatus={menuStatus} />
       </Wrapper>
     </>
   );
