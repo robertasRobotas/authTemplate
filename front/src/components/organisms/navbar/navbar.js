@@ -5,13 +5,10 @@ import { Tabs } from '../../molecules';
 import { Burger } from '../../atoms';
 
 const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   background-color: brown;
-`;
-
-const SmallMenuWrapper = styled.div`
-  @media only screen and (min-width: 600px) {
-    display: none;
-  }
+  height: 4em;
 `;
 
 const Navbar = () => {

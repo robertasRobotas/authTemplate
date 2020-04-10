@@ -1,0 +1,7 @@
+.closed {
+  left: -300px;
+  transition: 1s;
+}
+.open {
+  transition: 1s;
+}
