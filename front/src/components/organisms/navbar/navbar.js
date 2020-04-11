@@ -6,7 +6,7 @@ import { Burger, Logo } from '../../atoms';
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   background-color: brown;
   height: 4em;
 `;

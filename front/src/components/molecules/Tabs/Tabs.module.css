@@ -25,9 +25,20 @@ ul {
 
 @media only screen and (min-width: 600px) {
   ul {
-    grid-column: 2/4;
+    grid-column: 4/10;
     position: static;
     background-color: yellow;
+    height: auto;
+    width: auto;
+    top: 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  ul {
+    grid-column: 6/10;
+    position: static;
+    background-color: red;
     height: auto;
     width: auto;
     top: 0;
