@@ -25,7 +25,7 @@ ul {
 
 @media only screen and (min-width: 600px) {
   ul {
-    grid-column: 4/10;
+    grid-column: 4/11;
     position: static;
     background-color: yellow;
     height: auto;
