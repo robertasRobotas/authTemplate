@@ -6,7 +6,6 @@ import { getUserData } from './apiCalls/user';
 
 const PrivateRoute = ({ component: Component, path, location, ...rest }) => {
   const userData = JSON.parse(localStorage.getItem('userData'));
-
   return (
     <Route
       exact

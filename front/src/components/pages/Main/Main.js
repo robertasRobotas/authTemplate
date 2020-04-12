@@ -2,8 +2,9 @@ import React from 'react';
 import Wrapper from '../../../helpers/Wrapper';
 
 const Main = () => {
+  console.log('main');
   const userData = () => {
-    console.log(JSON.parse(localStorage.getItem('userData')));
+    console.log('x', JSON.parse(localStorage.getItem('userData')));
   };
 
   return (

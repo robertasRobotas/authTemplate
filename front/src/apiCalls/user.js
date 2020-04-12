@@ -1,7 +1,8 @@
 import axios from 'axios';
 import history from '../history';
 
-const getUserData = async () =>
+const getUserData = async () => {
+  console.log('hittt');
   await axios
     .get('http://localhost:8085/api/user/getUser', {
       withCredentials: true,
@@ -14,5 +15,6 @@ const getUserData = async () =>
         history.push('/login');
       }
     });
+};
 
 export { getUserData };

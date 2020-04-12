@@ -4,7 +4,7 @@ import './burger.css';
 const Burger = ({ changeMenuStatus }) => {
   return (
     <>
-      <div onClick={() => changeMenuStatus()} class='nav-icon'>
+      <div onClick={() => changeMenuStatus()} className='nav-icon'>
         <div></div>
       </div>
     </>

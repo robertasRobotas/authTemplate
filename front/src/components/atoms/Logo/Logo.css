@@ -30,7 +30,7 @@
 
 .Text {
   position: relative;
-  top: 50%;
   margin: auto;
+  top: 50%;
   transform: translateY(-50%);
 }
