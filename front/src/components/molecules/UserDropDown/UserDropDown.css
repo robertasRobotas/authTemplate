@@ -1,5 +1,4 @@
 .user {
-  background-color: green;
   display: none;
 }
 
@@ -8,7 +7,6 @@
     display: inline-block;
     grid-column: 11/13;
     position: static;
-    background-color: goldenrod;
     height: auto;
     width: auto;
     top: 0;

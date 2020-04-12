@@ -1,0 +1,6 @@
+.NavbarContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: brown;
+  height: 4em;
+}
