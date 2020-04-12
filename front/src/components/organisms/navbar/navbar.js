@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import navLinks from './navLinks';
 import { Tabs, UserDropDown } from '../../molecules';
 import { Burger, Logo } from '../../atoms';
+import { getUserData } from '../../../helpers/functions';
 
 const Wrapper = styled.div`
   display: grid;
@@ -13,7 +14,12 @@ const Wrapper = styled.div`
 
 const Navbar = () => {
   const [menuStatus, setMenuStatus] = useState(false);
+  const [userData, setUserData] = useState(getUserData());
+  console.log('HOOKuserData', userData);
 
+  // useEffect(() => {
+  //   setUserData(getUserData());
+  // }, [JSON.parse(localStorage.getItem('userData'))]);
   const changeMenuStatus = () => {
     setMenuStatus(!menuStatus);
     console.log(menuStatus);

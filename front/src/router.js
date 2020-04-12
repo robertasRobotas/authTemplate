@@ -1,18 +1,20 @@
 import React from 'react';
 import { Route, Router } from 'react-router-dom';
-import { Main, Login, About, Contact } from './components/pages';
+import { Login, Main, About, Contact } from './components/pages';
 import history from './history';
-import { getUserData } from './apiCalls/user';
+import { loginCheck } from './apiCalls/user';
+import { getUserData } from './helpers/functions';
 
-const PrivateRoute = ({ component: Component, path, location, ...rest }) => {
-  const userData = JSON.parse(localStorage.getItem('userData'));
+const PrivateRoute = ({ component: Component, path }) => {
+  const userData = getUserData();
+  console.log('userData', userData);
   return (
     <Route
       exact
       path={path}
-      render={(props) => {
-        getUserData();
-        return <Component {...props} userData={userData} />;
+      render={() => {
+        loginCheck();
+        return <Component userData={userData} />;
       }}
     />
   );

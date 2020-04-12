@@ -11,10 +11,25 @@ const getUserData = async () => {
       localStorage.setItem('userData', JSON.stringify(res.data.user));
     })
     .catch((err) => {
+      console.log('getUserData, unable to get data');
       if (err.response.status === 401) {
         history.push('/login');
       }
     });
 };
 
-export { getUserData };
+const loginCheck = async () => {
+  await axios
+    .get('http://localhost:8085/api/user/loginCheck', {
+      withCredentials: true,
+    })
+    .catch((err) => {
+      console.log('loginCheck, unable to get userData');
+
+      if (err.response.status === 401) {
+        history.push('/login');
+      }
+    });
+};
+
+export { getUserData, loginCheck };

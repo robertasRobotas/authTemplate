@@ -1,15 +1,12 @@
 import React from 'react';
 import Wrapper from '../../../helpers/Wrapper';
 
-const Main = () => {
-  console.log('main');
-  const userData = () => {
-    console.log('x', JSON.parse(localStorage.getItem('userData')));
-  };
+const Main = ({ userData }) => {
+  console.log('userDataxxx', userData);
 
   return (
     <>
-      MAIN PAGE <button onClick={userData}>Get user data</button>
+      MAIN PAGE <button>Get user data</button>
     </>
   );
 };
