@@ -1,9 +1,7 @@
 import React from 'react';
 import Wrapper from '../../../helpers/Wrapper';
 
-const Main = ({ userData }) => {
-  console.log('userDataxxx', userData);
-
+const Main = () => {
   return (
     <>
       MAIN PAGE <button>Get user data</button>
@@ -11,4 +9,4 @@ const Main = ({ userData }) => {
   );
 };
 
-export default Wrapper(Main);
+export default Main;

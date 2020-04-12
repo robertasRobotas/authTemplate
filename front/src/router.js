@@ -7,7 +7,6 @@ import { getUserData } from './helpers/functions';
 
 const PrivateRoute = ({ component: Component, path }) => {
   const userData = getUserData();
-  console.log('userData', userData);
   return (
     <Route
       exact

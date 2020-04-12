@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const Navbar = () => {
   const [menuStatus, setMenuStatus] = useState(false);
-  const [userData, setUserData] = useState(getUserData());
+  const userData = getUserData();
   console.log('HOOKuserData', userData);
 
   // useEffect(() => {
