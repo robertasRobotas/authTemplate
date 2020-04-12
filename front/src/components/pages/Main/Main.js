@@ -1,12 +1,13 @@
-import React from 'react';
-import Wrapper from '../../../helpers/Wrapper';
+import React, { Component } from 'react';
+import { Spinner } from '../../atoms';
+import { Navbar } from '../../organisms/';
+import { getUserData } from '../../../helpers/functions';
 
-const Main = () => {
-  return (
-    <>
-      MAIN PAGE <button>Get user data</button>
-    </>
-  );
-};
+class Main extends Component {
+  render() {
+    const userData = getUserData();
+    return <>{userData ? <Navbar /> : <Spinner />}</>;
+  }
+}
 
 export default Main;
