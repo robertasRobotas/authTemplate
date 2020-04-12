@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import navLinks from './navLinks';
-import { Tabs } from '../../molecules';
+import { Tabs, UserDropDown } from '../../molecules';
 import { Burger, Logo } from '../../atoms';
 
 const Wrapper = styled.div`
@@ -25,6 +25,7 @@ const Navbar = () => {
         <Logo />
         <Burger changeMenuStatus={changeMenuStatus} />
         <Tabs navLinks={navLinks} menuStatus={menuStatus} />
+        <UserDropDown />
       </Wrapper>
     </>
   );
