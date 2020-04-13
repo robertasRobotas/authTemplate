@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import navLinks from './navLinks';
 import { Tabs, UserDropDown } from '../../molecules';
 import { Burger, Logo } from '../../atoms';
-import { getUserData } from '../../../helpers/functions';
 import './Navbar.css';
 
 const Navbar = () => {
