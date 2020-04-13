@@ -7,7 +7,7 @@ const Main = (props) => {
   console.log('props', props);
   return (
     <>
-      aaaaaaa
+      MAIN aaaaaaa
       <button></button>
     </>
   );

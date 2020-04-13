@@ -1,29 +1,36 @@
 import React from 'react';
-import { Route, Router } from 'react-router-dom';
+import { Route, Router, Redirect } from 'react-router-dom';
 import { Login, Main, About, Contact } from './components/pages';
 import history from './history';
 import { loginCheck } from './apiCalls/user';
 import { getUserData } from './helpers/functions';
 
-const PrivateRoute = ({ component: Component, path }) => {
-  const userData = getUserData();
+const PrivateRoute = ({ component: Component, path, rootModel }) => {
   return (
     <Route
       exact
       path={path}
-      render={() => {
+      render={(props) => {
         loginCheck();
-        return <Component userData={userData} />;
+        return (
+          <>
+            {rootModel.auth.isLoggedIn ? (
+              <Component {...props} rootModel={rootModel} />
+            ) : (
+              <Redirect to='/login' />
+            )}
+          </>
+        );
       }}
     />
   );
 };
 
-const Routes = () => {
+const Routes = ({ rootModel }) => {
   return (
     <Router history={history}>
       <Route path='/login' component={Login} />
-      <PrivateRoute path='/' component={Main} />
+      <PrivateRoute path='/' component={Main} rootModel={rootModel} />
       <PrivateRoute path='/about' component={About} />
       <PrivateRoute path='/contact' component={Contact} />
     </Router>

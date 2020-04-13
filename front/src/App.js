@@ -1,25 +1,16 @@
 import React, { useEffect } from 'react';
 import Router from './router';
 import { getUserData } from './apiCalls/user';
-import AuthModel from './store/AuthModel';
-import { Main, Login } from './components/pages';
+import RootModel from './store/RootModel';
+import { onSnapshot } from 'mobx-state-tree';
 
-const rootModel = AuthModel.create({
-  user: {
-    displayName: 'Rovertas',
-    id: 'xxx',
-    email: '@lopas',
-    picture: ' asdfsadfsdf',
-  },
-});
-
+const rootModel = RootModel.create({ auth: {} });
+onSnapshot(rootModel, (snapshot) => console.log('snapshot', snapshot));
 const App = () => {
-  const store = AuthModel;
   getUserData();
   return (
     <>
-      <Login />
-      <Main rootModel={store} />
+      <Router rootModel={rootModel} />
     </>
   );
 };
