@@ -7,8 +7,8 @@ const Main = (props) => {
   console.log('props', props);
   return (
     <>
-      {props.rootModel.getDisplayName()}
-      <button onClick={props.rootModel.getUserData}></button>
+      aaaaaaa
+      <button></button>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import { types, onSnapshot } from 'mobx-state-tree';
 
-import UserModel from './UserModel';
+import AuthModel from './AuthModel';
 
-const Root = types.model('Root', { user: UserModel });
+const Root = types.model('Root', { auth: AuthModel });
 
 export default Root;
