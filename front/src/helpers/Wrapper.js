@@ -1,11 +1,16 @@
 import React from 'react';
 import { Navbar } from '../components/organisms';
+import { Spinner } from '../components/atoms';
 
-const Wrapper = (Page) => () => {
+const Wrapper = ({ rootModel, children }) => {
+  console.log(rootModel);
   return (
     <>
-      <Navbar />
-      <Page />
+      {rootModel.auth.isLoggedIn ? (
+        <>
+          <Navbar /> {children}
+        </>
+      ) : null}
     </>
   );
 };

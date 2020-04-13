@@ -3,7 +3,6 @@ import { Route, Router, Redirect } from 'react-router-dom';
 import { Login, Main, About, Contact } from './components/pages';
 import history from './history';
 import { loginCheck } from './apiCalls/user';
-import { getUserData } from './helpers/functions';
 
 const PrivateRoute = ({ component: Component, path, rootModel }) => {
   return (
@@ -31,8 +30,8 @@ const Routes = ({ rootModel }) => {
     <Router history={history}>
       <Route path='/login' component={Login} />
       <PrivateRoute path='/' component={Main} rootModel={rootModel} />
-      <PrivateRoute path='/about' component={About} />
-      <PrivateRoute path='/contact' component={Contact} />
+      <PrivateRoute path='/about' component={About} rootModel={rootModel} />
+      <PrivateRoute path='/contact' component={Contact} rootModel={rootModel} />
     </Router>
   );
 };

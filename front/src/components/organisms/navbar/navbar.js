@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
 import navLinks from './navLinks';
 import { Tabs, UserDropDown } from '../../molecules';
 import { Burger, Logo } from '../../atoms';

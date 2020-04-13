@@ -7,4 +7,4 @@ const About = () => {
   return <>ABOUT</>;
 };
 
-export default Wrapper(About);
+export default About;

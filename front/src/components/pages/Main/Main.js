@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Spinner } from '../../atoms';
-import { Navbar } from '../../organisms/';
+import React from 'react';
+import Wrapper from '../../../helpers/Wrapper';
 import { observer } from 'mobx-react';
 
-const Main = (props) => {
-  console.log('props', props);
+const Main = ({ history, location, rootModel }) => {
   return (
     <>
-      MAIN aaaaaaa
-      <button></button>
+      <Wrapper rootModel={rootModel}>
+        <button>aaaa</button>
+        gggggg
+      </Wrapper>
     </>
   );
 };

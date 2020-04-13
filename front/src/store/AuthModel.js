@@ -4,7 +4,7 @@ import UserModel from './UserModel';
 
 const Auth = types
   .model('User', {
-    isLoggedIn: types.optional(types.boolean, false),
+    isLoggedIn: types.optional(types.boolean, true),
     user: types.maybeNull(UserModel),
     loading: types.optional(types.boolean, false),
   })

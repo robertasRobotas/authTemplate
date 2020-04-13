@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Router from './router';
 import { getUserData } from './apiCalls/user';
 import RootModel from './store/RootModel';
