@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import navLinks from './navLinks';
-import { Tabs, UserDropDown } from '../../molecules';
+import { Tabs, UserDropDownImage } from '../../molecules';
 import { Burger, Logo } from '../../atoms';
 import './Navbar.css';
 
@@ -17,7 +17,7 @@ const Navbar = ({ rootModel }) => {
         <Logo />
         <Burger changeMenuStatus={changeMenuStatus} />
         <Tabs navLinks={navLinks} menuStatus={menuStatus} />
-        <UserDropDown picture={rootModel.auth.user.picture} />
+        <UserDropDownImage picture={rootModel.auth.user.picture} />
       </div>
     </>
   );

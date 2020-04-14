@@ -1,8 +1,7 @@
+import './UserDropDownImage.css';
 import React from 'react';
-import './UserDropDown.css';
 import UserIcon from '../../../assets/photos/User.png';
-
-const UserDropdown = ({ picture }) => {
+const DropDownUserInfo = ({ picture }) => {
   console.log(picture);
   return (
     <div className='user'>
@@ -14,4 +13,4 @@ const UserDropdown = ({ picture }) => {
   );
 };
 
-export default UserDropdown;
+export default DropDownUserInfo;

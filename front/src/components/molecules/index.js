@@ -1,4 +1,5 @@
 import Tabs from './Tabs/Tabs';
-import UserDropDown from './UserDropDown/UserDropDown';
+import UserDropDownImage from './UserDropDownImage/UserDropDownImage';
+import DropDownUserInfo from './DropDownUserInfo/DropDownUserInfo';
 
-export { Tabs, UserDropDown };
+export { Tabs, UserDropDownImage, DropDownUserInfo };
