@@ -6,13 +6,7 @@ const Wrapper = ({ rootModel, children, location }) => {
   console.log(rootModel);
   return (
     <>
-      {rootModel.auth.isLoggedIn ? (
-        <>
-          <Navbar /> {children}
-        </>
-      ) : (
-        <Spinner />
-      )}
+      <Navbar rootModel={rootModel} /> {children}
     </>
   );
 };

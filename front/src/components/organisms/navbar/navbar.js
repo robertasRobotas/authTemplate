@@ -4,7 +4,7 @@ import { Tabs, UserDropDown } from '../../molecules';
 import { Burger, Logo } from '../../atoms';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ rootModel }) => {
   const [menuStatus, setMenuStatus] = useState(false);
 
   const changeMenuStatus = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
         <Logo />
         <Burger changeMenuStatus={changeMenuStatus} />
         <Tabs navLinks={navLinks} menuStatus={menuStatus} />
-        <UserDropDown />
+        <UserDropDown picture={rootModel.auth.user.picture} />
       </div>
     </>
   );
