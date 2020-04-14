@@ -1,11 +1,15 @@
 import React from 'react';
 
-import Wrapper from '../../../helpers/Wrapper';
+import Wrapper from '../../_hoc/Wrapper';
 
-const Contact = () => {
+const Contact = ({ history, location, rootModel }) => {
   console.log('contact');
 
-  return <>CONTACT</>;
+  return (
+    <Wrapper rootModel={rootModel} location={location}>
+      CONTACT
+    </Wrapper>
+  );
 };
 
 export default Contact;

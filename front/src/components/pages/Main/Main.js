@@ -1,12 +1,12 @@
 import React from 'react';
-import Wrapper from '../../../helpers/Wrapper';
+import Wrapper from '../../_hoc/Wrapper';
 import { observer } from 'mobx-react';
 
 const Main = ({ history, location, rootModel }) => {
   return (
     <>
-      <Wrapper rootModel={rootModel}>
-        <button>aaaa</button>
+      <Wrapper rootModel={rootModel} location={location}>
+        <button onClick={rootModel.auth.getUserData}>aaaa</button>
         gggggg
       </Wrapper>
     </>

@@ -1,10 +1,14 @@
 import React from 'react';
-import Wrapper from '../../../helpers/Wrapper';
+import Wrapper from '../../_hoc/Wrapper';
 
-const About = () => {
+const About = ({ history, location, rootModel }) => {
   console.log('about');
 
-  return <>ABOUT</>;
+  return (
+    <Wrapper rootModel={rootModel} location={location}>
+      ABOUT
+    </Wrapper>
+  );
 };
 
 export default About;

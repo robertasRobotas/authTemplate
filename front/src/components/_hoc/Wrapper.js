@@ -1,8 +1,8 @@
 import React from 'react';
-import { Navbar } from '../components/organisms';
-import { Spinner } from '../components/atoms';
+import { Navbar } from '../organisms';
+import { Spinner } from '../atoms';
 
-const Wrapper = ({ rootModel, children }) => {
+const Wrapper = ({ rootModel, children, location }) => {
   console.log(rootModel);
   return (
     <>
@@ -10,7 +10,9 @@ const Wrapper = ({ rootModel, children }) => {
         <>
           <Navbar /> {children}
         </>
-      ) : null}
+      ) : (
+        <Spinner />
+      )}
     </>
   );
 };
