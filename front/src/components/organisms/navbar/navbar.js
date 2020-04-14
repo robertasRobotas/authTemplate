@@ -6,6 +6,12 @@ import './Navbar.css';
 
 const Navbar = ({ rootModel }) => {
   const [menuStatus, setMenuStatus] = useState(false);
+  const [userInfoDropDownStatus, setUserInfoDropDownStatus] = useState(false);
+
+  const changeUserInfoDropDownStatus = () => {
+    setUserInfoDropDownStatus(!userInfoDropDownStatus);
+    console.log(userInfoDropDownStatus);
+  };
 
   const changeMenuStatus = () => {
     setMenuStatus(!menuStatus);
@@ -17,7 +23,11 @@ const Navbar = ({ rootModel }) => {
         <Logo />
         <Burger changeMenuStatus={changeMenuStatus} />
         <Tabs navLinks={navLinks} menuStatus={menuStatus} />
-        <UserDropDownImage picture={rootModel.auth.user.picture} />
+        <UserDropDownImage
+          picture={rootModel.auth.user.picture}
+          changeUserInfoDropDownStatus={changeUserInfoDropDownStatus}
+          userInfoDropDownStatus={userInfoDropDownStatus}
+        />
       </div>
     </>
   );

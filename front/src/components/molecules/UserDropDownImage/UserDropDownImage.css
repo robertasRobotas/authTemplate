@@ -44,4 +44,5 @@
   top: 50%;
   transform: translateY(-50%);
   margin: auto;
+  z-index: 30;
 }
