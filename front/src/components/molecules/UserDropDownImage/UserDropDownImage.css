@@ -2,6 +2,17 @@
   display: none;
 }
 
+.userComponents {
+  position: relative;
+  text-align: center;
+  display: grid;
+  width: 3em;
+  top: 30%;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+}
+
 @media only screen and (min-width: 600px) {
   .user {
     display: inline-block;
@@ -33,16 +44,4 @@
   position: relative;
   bottom: 0.8em;
   left: 1.9em;
-}
-
-.userComponents {
-  position: relative;
-  text-align: center;
-  display: grid;
-  width: 3em;
-  cursor: pointer;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: auto;
-  z-index: 30;
 }

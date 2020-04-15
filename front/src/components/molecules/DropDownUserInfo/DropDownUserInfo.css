@@ -1,9 +1,21 @@
 .wrapper {
   height: 250px;
   width: 160px;
-  background-color: green;
   position: absolute;
-  top: 20px;
-  right: -10px;
+  top: 55px;
+  right: 17px;
   z-index: 20;
+  border-radius: 4px;
+  background-color: green;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid green;
+  position: absolute;
+  right: 5px;
+  top: -15px;
 }

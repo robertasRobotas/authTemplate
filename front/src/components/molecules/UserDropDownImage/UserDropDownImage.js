@@ -13,14 +13,15 @@ const UserDropDownImage = ({
     <div className='user'>
       <div className='userComponents' onClick={changeUserInfoDropDownStatus}>
         <img className='userPhoto' src={picture ? picture : UserIcon} />
-        <div className='arrow-down'>
-          {userInfoDropDownStatus && <DropDownUserInfo />}
-        </div>
+        <div className='arrow-down'></div>
       </div>
       {userInfoDropDownStatus && (
-        <BlankScreenToggle
-          changeUserInfoDropDownStatus={changeUserInfoDropDownStatus}
-        />
+        <>
+          <BlankScreenToggle
+            changeUserInfoDropDownStatus={changeUserInfoDropDownStatus}
+          />
+          <DropDownUserInfo />
+        </>
       )}
     </div>
   );
