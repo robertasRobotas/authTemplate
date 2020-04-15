@@ -4,7 +4,7 @@ import UserModel from './UserModel';
 
 const Auth = types
   .model('User', {
-    isLoggedIn: types.optional(types.boolean, false),
+    loggedInStatus: types.optional(types.boolean, false),
     user: types.maybeNull(UserModel),
     loading: types.optional(types.boolean, false),
   })
@@ -31,10 +31,10 @@ const Auth = types
           email: userData.data.user.email,
           picture: userData.data.user.picture,
         };
-        self.isLoggedIn = true;
+        self.loggedInStatus = true;
         self.loading = false;
       } catch (error) {
-        self.isLoggedIn = false;
+        self.loggedInStatus = false;
         self.loading = false;
       }
     }),

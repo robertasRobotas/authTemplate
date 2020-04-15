@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '../../atoms';
+import { NavigationLink } from '../../atoms';
 import './Tabs.css';
 
 const NavBarTabs = ({ navLinks, menuStatus }) => {
@@ -7,7 +7,7 @@ const NavBarTabs = ({ navLinks, menuStatus }) => {
     <ul className={menuStatus ? 'open' : 'closed'}>
       <div className='ResponsiveLinks'>
         {navLinks.map((link, i) => (
-          <Link key={i} path={link.path} text={link.text} />
+          <NavigationLink key={i} path={link.path} text={link.text} />
         ))}
       </div>
     </ul>

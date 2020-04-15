@@ -1,3 +1,18 @@
+div {
+  font-size: 1em;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #fff;
+  position: absolute;
+  right: 5px;
+  top: -15px;
+}
+
 .wrapper {
   height: 250px;
   width: 160px;
@@ -6,16 +21,40 @@
   right: 17px;
   z-index: 20;
   border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  background-clip: padding-box;
+  padding: 6px;
+}
+
+.infoText {
+  font-size: 0.8em;
+}
+
+.userName {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+
   background-color: green;
 }
 
-.triangle-up {
-  width: 0;
+.line {
+  display: block;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 15px solid green;
-  position: absolute;
-  right: 5px;
-  top: -15px;
+  margin: 8px 0;
+  border-top: 1px solid #e1e4e8;
+}
+
+.logout {
+  border: 0;
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+}
+
+.logout:hover {
+  background-color: blue;
 }

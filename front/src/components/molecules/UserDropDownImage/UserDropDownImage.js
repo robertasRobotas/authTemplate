@@ -5,14 +5,20 @@ import { DropDownUserInfo } from '../';
 import { BlankScreenToggle } from '../../atoms';
 
 const UserDropDownImage = ({
-  picture,
+  userPicture,
+  userDisplayName,
+  userLoggedInStatus,
   changeUserInfoDropDownStatus,
   userInfoDropDownStatus,
 }) => {
   return (
     <div className='user'>
       <div className='userComponents' onClick={changeUserInfoDropDownStatus}>
-        <img className='userPhoto' src={picture ? picture : UserIcon} />
+        <img
+          alt='userPhoto'
+          className='userPhoto'
+          src={userPicture ? userPicture : UserIcon}
+        />
         <div className='arrow-down'></div>
       </div>
       {userInfoDropDownStatus && (
@@ -20,7 +26,10 @@ const UserDropDownImage = ({
           <BlankScreenToggle
             changeUserInfoDropDownStatus={changeUserInfoDropDownStatus}
           />
-          <DropDownUserInfo />
+          <DropDownUserInfo
+            userDisplayName={userDisplayName}
+            userLoggedInStatus={userLoggedInStatus}
+          />
         </>
       )}
     </div>

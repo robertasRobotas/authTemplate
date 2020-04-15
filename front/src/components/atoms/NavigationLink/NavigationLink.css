@@ -1,0 +1,22 @@
+a {
+  margin: 2em;
+  text-decoration: none;
+  text-align: center;
+
+  padding: 6px;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 600px) {
+  a {
+    margin: 1em;
+  }
+}
+
+.activeLink {
+  background-color: green;
+}
+
+.notActiveLink {
+  background-color: grey;
+}

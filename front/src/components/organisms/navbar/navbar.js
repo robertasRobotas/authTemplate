@@ -24,7 +24,9 @@ const Navbar = ({ rootModel }) => {
         <Burger changeMenuStatus={changeMenuStatus} />
         <Tabs navLinks={navLinks} menuStatus={menuStatus} />
         <UserDropDownImage
-          picture={rootModel.auth.user.picture}
+          userPicture={rootModel.auth.user.picture}
+          userDisplayName={rootModel.auth.user.displayName}
+          userLoggedInStatus={rootModel.auth.loggedInStatus}
           changeUserInfoDropDownStatus={changeUserInfoDropDownStatus}
           userInfoDropDownStatus={userInfoDropDownStatus}
         />
