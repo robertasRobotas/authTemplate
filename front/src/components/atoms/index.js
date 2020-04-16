@@ -4,6 +4,8 @@ import Burger from './Burger/Burger';
 import Logo from './Logo/Logo';
 import Spinner from './Spinner/Spinner';
 import BlankScreenToggle from './BlankScreenToggle/BlankScreenToggle';
+import GoogleLoginButton from './LoginButtons/GoogleLoginButton';
+import FacebookLoginButton from './LoginButtons/FacebookLoginButton';
 
 export {
   NavigationLink,
@@ -12,4 +14,6 @@ export {
   Logo,
   Spinner,
   BlankScreenToggle,
+  GoogleLoginButton,
+  FacebookLoginButton,
 };

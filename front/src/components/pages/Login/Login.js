@@ -1,18 +1,8 @@
 import React from 'react';
-import {
-  FacebookLoginButton,
-  GoogleLoginButton,
-} from 'react-social-login-buttons';
+import { FacebookLoginButton, GoogleLoginButton } from '../../atoms';
 import styled from 'styled-components';
 
 function Login() {
-  const style = { textDecoration: 'none', textAlign: 'center', width: '10px' };
-
-  const ButtonWrapper = styled.div`
-    margin-top: 10em;
-    text-align: center;
-  `;
-
   const Form = styled.div`
     position: relative;
     width: 50%;
@@ -22,17 +12,9 @@ function Login() {
 
   return (
     <Form>
-      <a style={style} href='http://localhost:8085/google/auth'>
-        <ButtonWrapper>
-          <GoogleLoginButton />
-        </ButtonWrapper>
-      </a>
+      <GoogleLoginButton />
 
-      <a style={style} href='http://localhost:8085/facebook/auth'>
-        <ButtonWrapper>
-          <FacebookLoginButton />
-        </ButtonWrapper>
-      </a>
+      <FacebookLoginButton />
     </Form>
   );
 }

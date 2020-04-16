@@ -15,7 +15,7 @@ const DropDownUserInfo = ({ history, authModel }) => {
     <div className='wrapper'>
       <div className='triangle-up'></div>
       <>
-        {authModel.loggedInStatus ? (
+        {false ? (
           <div>
             <span className='infoText'>Singed in as </span>
             <strong className='userName'>{authModel.user.displayName}</strong>
@@ -27,7 +27,7 @@ const DropDownUserInfo = ({ history, authModel }) => {
             </button>
           </div>
         ) : (
-          <>not logged in</>
+          <span className='infoText'>Sign In </span>
         )}
       </>
     </div>

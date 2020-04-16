@@ -1,0 +1,11 @@
+.link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.buttonWrapper {
+  text-align: center;
+}
