@@ -1,11 +1,10 @@
 import React from 'react';
 import { Navbar } from '../organisms';
 
-const Wrapper = ({ rootModel, children, location }) => {
-  console.log(rootModel);
+const Wrapper = ({ history, rootModel, children, location }) => {
   return (
     <>
-      <Navbar rootModel={rootModel} /> {children}
+      <Navbar history={history} rootModel={rootModel} /> {children}
     </>
   );
 };

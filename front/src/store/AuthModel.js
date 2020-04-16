@@ -3,7 +3,7 @@ import axios from 'axios';
 import UserModel from './UserModel';
 
 const Auth = types
-  .model('User', {
+  .model('Auth', {
     loggedInStatus: types.optional(types.boolean, false),
     user: types.maybeNull(UserModel),
     loading: types.optional(types.boolean, false),
@@ -36,6 +36,18 @@ const Auth = types
       } catch (error) {
         self.loggedInStatus = false;
         self.loading = false;
+      }
+    }),
+
+    logout: flow(function* logout() {
+      try {
+        yield axios.get('http://localhost:8085/api/user/logout', {
+          withCredentials: true,
+        });
+
+        console.log('logged out');
+      } catch (error) {
+        console.log('error', error);
       }
     }),
   }));

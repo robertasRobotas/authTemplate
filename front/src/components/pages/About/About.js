@@ -2,10 +2,8 @@ import React from 'react';
 import Wrapper from '../../_hoc/Wrapper';
 
 const About = ({ history, location, rootModel }) => {
-  console.log('about');
-
   return (
-    <Wrapper rootModel={rootModel} location={location}>
+    <Wrapper history={history} rootModel={rootModel} location={location}>
       ABOUT
     </Wrapper>
   );

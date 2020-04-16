@@ -25,10 +25,4 @@ router.get(
   }
 );
 
-router.get('/logout', (req, res) => {
-  req.logout();
-  res.clearCookie('connect.sid');
-  res.redirect('http://localhost:3000/login');
-});
-
 module.exports = router;

@@ -7,7 +7,6 @@ import { loginCheck } from './apiCalls/user';
 import { observer } from 'mobx-react';
 
 const PrivateRoute = ({ component: Component, path, rootModel }) => {
-  console.log('route', rootModel.auth);
   return (
     <Route
       exact

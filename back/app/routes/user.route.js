@@ -10,4 +10,10 @@ router.get('/loginCheck', isLoggedIn, (req, res) => {
   return res.status(200).json({ message: 'ok' });
 });
 
+router.get('/logout', (req, res) => {
+  req.logout();
+  res.clearCookie('connect.sid');
+  res.status(200).json({ text: 'loggedOut' });
+});
+
 module.exports = router;

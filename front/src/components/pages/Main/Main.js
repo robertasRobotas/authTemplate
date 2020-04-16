@@ -5,7 +5,7 @@ import { observer } from 'mobx-react';
 const Main = ({ history, location, rootModel }) => {
   return (
     <>
-      <Wrapper rootModel={rootModel} location={location}>
+      <Wrapper history={history} rootModel={rootModel} location={location}>
         <button onClick={rootModel.auth.getUserData}>aaaa</button>
         gggggg
       </Wrapper>

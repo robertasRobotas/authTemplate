@@ -5,9 +5,8 @@ import { DropDownUserInfo } from '../';
 import { BlankScreenToggle } from '../../atoms';
 
 const UserDropDownImage = ({
-  userPicture,
-  userDisplayName,
-  userLoggedInStatus,
+  history,
+  authModel,
   changeUserInfoDropDownStatus,
   userInfoDropDownStatus,
 }) => {
@@ -17,7 +16,7 @@ const UserDropDownImage = ({
         <img
           alt='userPhoto'
           className='userPhoto'
-          src={userPicture ? userPicture : UserIcon}
+          src={authModel.user.picture ? authModel.user.picture : UserIcon}
         />
         <div className='arrow-down'></div>
       </div>
@@ -26,10 +25,7 @@ const UserDropDownImage = ({
           <BlankScreenToggle
             changeUserInfoDropDownStatus={changeUserInfoDropDownStatus}
           />
-          <DropDownUserInfo
-            userDisplayName={userDisplayName}
-            userLoggedInStatus={userLoggedInStatus}
-          />
+          <DropDownUserInfo history={history} authModel={authModel} />
         </>
       )}
     </div>

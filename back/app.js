@@ -8,7 +8,7 @@ const cookieSession = require('express-session');
 
 mongoose.connect(process.env.MONGO_LINK_MLAB, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
 
 app.use(require('cookie-parser')());
@@ -29,7 +29,8 @@ app.use(
     cookie: { maxAge: 3600000, httpOnly: false },
     secret: 'keyboard cat',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    httpOnly: true,
   })
 );
 
