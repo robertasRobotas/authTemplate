@@ -10,7 +10,6 @@ const Navbar = ({ history, rootModel }) => {
 
   const changeUserInfoDropDownStatus = () => {
     setUserInfoDropDownStatus(!userInfoDropDownStatus);
-    console.log(userInfoDropDownStatus);
   };
 
   const changeMenuStatus = () => {

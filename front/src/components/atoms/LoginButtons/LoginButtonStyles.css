@@ -1,4 +1,5 @@
 .link {
+  text-decoration: none;
   display: block;
   text-decoration: none;
   text-align: center;
@@ -8,4 +9,12 @@
 
 .buttonWrapper {
   text-align: center;
+}
+
+.googleButton {
+  background-color: brown;
+}
+
+.facebookButton {
+  background-color: blue;
 }
