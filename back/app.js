@@ -26,11 +26,11 @@ app.use((req, res, next) => {
 
 app.use(
   cookieSession({
-    cookie: { maxAge: 3600000, httpOnly: false },
+    cookie: { maxAge: 3600000, httpOnly: true },
     secret: 'keyboard cat',
     resave: true,
     saveUninitialized: true,
-    httpOnly: true,
+    secure: true,
   })
 );
 
