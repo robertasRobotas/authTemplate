@@ -7,7 +7,7 @@ const Main = ({ history, location, rootModel }) => {
     <>
       <Wrapper history={history} rootModel={rootModel} location={location}>
         <button onClick={rootModel.auth.getUserData}>aaaa</button>
-        gggggg
+        Main Page
       </Wrapper>
     </>
   );

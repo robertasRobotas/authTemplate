@@ -21,7 +21,9 @@ const GoogleButton = () => {
   return (
     <a className='link' href='http://localhost:8085/google/auth'>
       <div className='googleButton'>
-        <GoogleImage />
+        <div className='imageWrapper'>
+          <GoogleImage />
+        </div>
       </div>
     </a>
   );

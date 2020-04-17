@@ -6,6 +6,7 @@ function Login() {
   const Form = styled.div`
     position: relative;
     width: 50%;
+    height: 100px;
     left: 50%;
     transform: translateX(-50%);
   `;

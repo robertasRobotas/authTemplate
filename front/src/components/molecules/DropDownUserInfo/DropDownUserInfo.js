@@ -32,8 +32,12 @@ const DropDownUserInfo = ({ history, authModel }) => {
         ) : (
           <>
             <span className='infoText'>Sign In </span>
-            <GoogleLoginButton />
-            <FacebookLoginButton />
+            <div className='buttonWrapper'>
+              <GoogleLoginButton />
+            </div>
+            <div className='buttonWrapper'>
+              <FacebookLoginButton />
+            </div>
           </>
         )}
       </>

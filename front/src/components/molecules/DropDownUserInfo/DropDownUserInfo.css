@@ -28,7 +28,9 @@ div {
 }
 
 .infoText {
+  display: block;
   font-size: 0.8em;
+  margin-bottom: 5px;
 }
 
 .userName {
@@ -36,7 +38,6 @@ div {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  margin-top: 5px;
 
   background-color: green;
 }
@@ -57,4 +58,13 @@ div {
 
 .logout:hover {
   background-color: blue;
+}
+
+.buttonWrapper {
+  height: 1.8em;
+  opacity: 0.8;
+}
+
+.buttonWrapper:hover {
+  opacity: 1;
 }

@@ -22,7 +22,9 @@ const FacebookButton = () => {
   return (
     <a className='link' href='http://localhost:8085/facebook/auth'>
       <div className='facebookButton'>
-        <FacebookImage />
+        <div className='imageWrapper'>
+          <FacebookImage />
+        </div>
       </div>
     </a>
   );
