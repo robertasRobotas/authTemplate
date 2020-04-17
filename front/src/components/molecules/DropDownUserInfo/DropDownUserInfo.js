@@ -25,7 +25,7 @@ const DropDownUserInfo = ({ history, authModel }) => {
             <div className='line' />
             <DropDownLink path='/user' text='Your details' />
             <div className='line' />
-            <button onClick={logoutUser} className='logout'>
+            <button onClick={logoutUser} className='logoutButton'>
               Logout
             </button>
           </div>
