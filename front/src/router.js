@@ -3,7 +3,6 @@ import { Route, Router, Redirect } from 'react-router-dom';
 import { Login, Main, About, Contact } from './components/pages';
 import { Spinner } from './components/atoms';
 import history from './history';
-import { loginCheck } from './apiCalls/user';
 import { observer } from 'mobx-react';
 
 const PrivateRoute = ({ component: Component, path, rootModel }) => {
@@ -12,7 +11,7 @@ const PrivateRoute = ({ component: Component, path, rootModel }) => {
       exact
       path={path}
       render={(props) => {
-        loginCheck();
+        rootModel.auth.loginCheck();
         return (
           <>
             {rootModel.auth.loggedInStatus ? (

@@ -39,15 +39,31 @@ const Auth = types
       }
     }),
 
+    loginCheck: flow(function* loginCheck() {
+      try {
+        yield axios.get('http://localhost:8085/api/user/loginCheck', {
+          withCredentials: true,
+        });
+
+        console.log('logged in good');
+      } catch (error) {
+        console.log('error', error);
+        self.loggedInStatus = false;
+        console.log('ghittt');
+      }
+    }),
+
     logout: flow(function* logout() {
       try {
         yield axios.get('http://localhost:8085/api/user/logout', {
           withCredentials: true,
         });
 
+        self.loggedInStatus = false;
         console.log('logged out');
       } catch (error) {
         console.log('error', error);
+        self.loggedInStatus = false;
       }
     }),
   }));
