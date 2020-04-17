@@ -20,6 +20,8 @@ ul {
   transition: 1s;
   min-width: 200px;
   top: 4em;
+  background-color: rgba(168, 168, 168, 0.7);
+  z-index: 1000;
 }
 
 .ResponsiveLinks {
