@@ -20,7 +20,7 @@ const Navbar = ({ history, rootModel }) => {
     <>
       <div className='NavbarContainer'>
         <Logo />
-        <Burger changeMenuStatus={changeMenuStatus} />
+        <Burger changeMenuStatus={changeMenuStatus} menuStatus={menuStatus} />
         <Tabs navLinks={navLinks} menuStatus={menuStatus} />
         <UserDropDownImage
           history={history}

@@ -1,13 +1,10 @@
 .closed {
   left: -300px;
-  transition: 1s;
 }
 .open {
-  transition: 1s;
 }
 
 .tabsWrapper {
-  transition: 1s;
 }
 
 ul {
@@ -17,10 +14,10 @@ ul {
   height: 100vh;
   z-index: 2;
   width: 50%;
-  transition: 1s;
   min-width: 200px;
   top: 4em;
   z-index: 1000;
+  background-color: rgba(168, 168, 168, 0.7);
 }
 
 .ResponsiveLinks {
@@ -35,6 +32,7 @@ ul {
     height: auto;
     width: auto;
     top: 0;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .ResponsiveLinks {
@@ -50,5 +48,6 @@ ul {
     height: auto;
     width: auto;
     top: 0;
+    background-color: rgba(0, 0, 0, 0);
   }
 }

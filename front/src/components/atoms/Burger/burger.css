@@ -1,4 +1,4 @@
-.nav-icon {
+.not-pressed {
   width: 40px;
   position: absolute;
   right: 20px;
@@ -7,9 +7,9 @@
   width: 1.5em;
 }
 
-.nav-icon:after,
-.nav-icon:before,
-.nav-icon div {
+.not-pressed:after,
+.not-pressed:before,
+.not-pressed div {
   background-color: #fff;
   border-radius: 3px;
   content: '';
@@ -17,18 +17,6 @@
   height: 3px;
   margin-bottom: 7px;
   transition: all 0.2s ease-in-out;
-}
-
-.nav-icon:hover:before {
-  transform: translateY(12px) rotate(135deg);
-}
-
-.nav-icon:hover:after {
-  transform: translateY(-12px) rotate(-135deg);
-}
-
-.nav-icon:hover div {
-  transform: scale(0);
 }
 
 @media only screen and (min-width: 600px) {
