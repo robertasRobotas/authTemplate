@@ -18,7 +18,7 @@ router.get(
     next();
   },
   passport.authenticate('facebook', {
-    failureRedirect: '/login',
+    failureRedirect: process.env.REDIRECT_AFTER_LOGIN_ON_FAILURE,
   }),
   function (req, res) {
     res.redirect(process.env.REDIRECT_AFTER_LOGIN);
