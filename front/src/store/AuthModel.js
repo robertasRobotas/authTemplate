@@ -47,12 +47,9 @@ const Auth = types
             withCredentials: true,
           }
         );
-
-        console.log('logged in good');
       } catch (error) {
-        console.log('error', error);
         self.loggedInStatus = false;
-        console.log('ghittt');
+        console.log('Error');
       }
     }),
 
@@ -66,9 +63,8 @@ const Auth = types
         );
 
         self.loggedInStatus = false;
-        console.log('logged out');
       } catch (error) {
-        console.log('error', error);
+        console.log('Error');
         self.loggedInStatus = false;
       }
     }),
