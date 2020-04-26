@@ -19,7 +19,7 @@ const Auth = types
 
       try {
         const userData = yield axios.get(
-          'http://localhost:8085/api/user/getUser',
+          `${process.env.REACT_APP_SERVER_HOST}/api/user/getUser`,
           {
             withCredentials: true,
           }
@@ -41,9 +41,12 @@ const Auth = types
 
     loginCheck: flow(function* loginCheck() {
       try {
-        yield axios.get('http://localhost:8085/api/user/loginCheck', {
-          withCredentials: true,
-        });
+        yield axios.get(
+          `${process.env.REACT_APP_SERVER_HOST}/api/user/loginCheck`,
+          {
+            withCredentials: true,
+          }
+        );
 
         console.log('logged in good');
       } catch (error) {
@@ -55,9 +58,12 @@ const Auth = types
 
     logout: flow(function* logout() {
       try {
-        yield axios.get('http://localhost:8085/api/user/logout', {
-          withCredentials: true,
-        });
+        yield axios.get(
+          `${process.env.REACT_APP_SERVER_HOST}/api/user/logout`,
+          {
+            withCredentials: true,
+          }
+        );
 
         self.loggedInStatus = false;
         console.log('logged out');
