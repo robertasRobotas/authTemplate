@@ -1,6 +1,5 @@
 .activeLink {
   background-color: grey;
-  margin: 2em;
   text-decoration: none;
   text-align: center;
   padding: 6px;
@@ -8,11 +7,13 @@
   font-weight: 600;
   background-color: rgba(140, 140, 140, 0.6);
   color: rgb(0, 0, 0);
+  border-top: 1px solid #e1e4e8;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .notActiveLink {
   background-color: grey;
-  margin: 2em;
   text-decoration: none;
   text-align: center;
   padding: 6px;
@@ -20,6 +21,9 @@
   font-weight: 400;
   background-color: rgba(140, 140, 140, 0.4);
   color: rgb(0, 0, 0);
+  border-top: 1px solid #e1e4e8;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .activeLink:hover {
@@ -33,9 +37,11 @@
 @media only screen and (min-width: 600px) {
   .activeLink {
     margin: 1em;
+    border-top: none;
   }
 
   .notActiveLink {
     margin: 1em;
+    border-top: none;
   }
 }
