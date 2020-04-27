@@ -24,7 +24,7 @@ const NavBarTabs = ({ rootModel, navLinks, menuStatus, history }) => {
           />
         </div>
         <div className='additionalLinkWrapper'>
-          <button onClick={logoutUser} className='logoutButton'>
+          <button onClick={logoutUser} className='tabletLogoutButton'>
             Logout
           </button>
         </div>

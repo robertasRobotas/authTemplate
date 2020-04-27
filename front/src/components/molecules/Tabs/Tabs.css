@@ -23,6 +23,24 @@ ul {
   display: grid;
 }
 
+.tabletLogoutButton {
+  width: calc(100% - 40px);
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-top: 1px solid #e1e4e8;
+  font-weight: 600;
+  color: rgb(212, 212, 212);
+  font-size: 1rem;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.tabletLogoutButton:hover {
+  color: rgb(165, 165, 165);
+}
+
 @media only screen and (min-width: 600px) {
   ul {
     grid-column: 4/11;
