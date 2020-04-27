@@ -9,6 +9,16 @@ const NavBarTabs = ({ navLinks, menuStatus }) => {
         {navLinks.map((link, i) => (
           <NavigationLink key={i} path={link.path} text={link.text} />
         ))}
+        <div className='additionalLinkWrapper'>
+          <NavigationLink
+            key={'profile'}
+            path={'/user'}
+            text={'Your details'}
+          />
+        </div>
+        <div className='additionalLinkWrapper'>
+          <NavigationLink key={'logout'} path={'/logout'} text={'Logout'} />
+        </div>
       </div>
     </ul>
   );
