@@ -1,7 +1,5 @@
 .closed {
-  left: -300px;
-}
-.open {
+  left: -600px;
 }
 
 .tabsWrapper {
@@ -11,13 +9,11 @@ ul {
   position: absolute;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 40vh;
   z-index: 2;
-  width: 50%;
-  min-width: 200px;
+  width: 100%;
   top: 4em;
-  z-index: 1000;
-  background-color: rgb(248, 246, 246);
+  background-color: rgb(112, 44, 44);
 }
 
 .ResponsiveLinks {
