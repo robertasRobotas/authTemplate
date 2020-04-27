@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationLink } from '../../atoms';
 import './Tabs.css';
 
-const NavBarTabs = ({ navLinks, menuStatus }) => {
+const NavBarTabs = ({ navLinks, menuStatus, userPicture }) => {
   return (
     <ul className={menuStatus ? 'open' : 'closed'}>
       <div className='ResponsiveLinks'>
@@ -14,6 +14,7 @@ const NavBarTabs = ({ navLinks, menuStatus }) => {
             key={'profile'}
             path={'/user'}
             text={'Your details'}
+            userPicture={userPicture}
           />
         </div>
         <div className='additionalLinkWrapper'>

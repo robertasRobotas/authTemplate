@@ -49,3 +49,11 @@
     width: 100%;
   }
 }
+
+.tabletUserPhoto {
+  display: inline-block;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 0.3em;
+  vertical-align: middle;
+}

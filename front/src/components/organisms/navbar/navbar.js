@@ -21,7 +21,11 @@ const Navbar = ({ history, rootModel }) => {
       <div className='NavbarContainer'>
         <Logo />
         <Burger changeMenuStatus={changeMenuStatus} menuStatus={menuStatus} />
-        <Tabs navLinks={navLinks} menuStatus={menuStatus} />
+        <Tabs
+          userPicture={rootModel.auth.user.picture}
+          navLinks={navLinks}
+          menuStatus={menuStatus}
+        />
         <UserDropDownImage
           history={history}
           authModel={rootModel.auth}
