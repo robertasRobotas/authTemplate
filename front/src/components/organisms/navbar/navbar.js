@@ -22,7 +22,8 @@ const Navbar = ({ history, rootModel }) => {
         <Logo />
         <Burger changeMenuStatus={changeMenuStatus} menuStatus={menuStatus} />
         <Tabs
-          userPicture={rootModel.auth.user.picture}
+          history={history}
+          rootModel={rootModel}
           navLinks={navLinks}
           menuStatus={menuStatus}
         />

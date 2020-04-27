@@ -2,7 +2,13 @@ import React from 'react';
 import { NavigationLink } from '../../atoms';
 import './Tabs.css';
 
-const NavBarTabs = ({ navLinks, menuStatus, userPicture }) => {
+const NavBarTabs = ({ rootModel, navLinks, menuStatus, history }) => {
+  const logoutUser = () => {
+    rootModel.auth.logout();
+    localStorage.removeItem('userData');
+    document.cookie = '';
+    history.push('/login');
+  };
   return (
     <ul className={menuStatus ? 'open' : 'closed'}>
       <div className='ResponsiveLinks'>
@@ -14,11 +20,13 @@ const NavBarTabs = ({ navLinks, menuStatus, userPicture }) => {
             key={'profile'}
             path={'/user'}
             text={'Your details'}
-            userPicture={userPicture}
+            userPicture={rootModel.auth.user.picture}
           />
         </div>
         <div className='additionalLinkWrapper'>
-          <NavigationLink key={'logout'} path={'/logout'} text={'Logout'} />
+          <button onClick={logoutUser} className='logoutButton'>
+            Logout
+          </button>
         </div>
       </div>
     </ul>
