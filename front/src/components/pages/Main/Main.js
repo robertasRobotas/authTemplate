@@ -1,13 +1,13 @@
 import React from 'react';
 import Wrapper from '../../_hoc/Wrapper';
 import { observer } from 'mobx-react';
+import '../pages.css';
 
 const Main = ({ history, location, rootModel }) => {
   return (
     <>
       <Wrapper history={history} rootModel={rootModel} location={location}>
-        <button onClick={rootModel.auth.getUserData}>aaaa</button>
-        Main Page
+        <div className='screen'></div>
       </Wrapper>
     </>
   );
