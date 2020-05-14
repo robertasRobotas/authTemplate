@@ -5,7 +5,7 @@ import Wrapper from '../../_hoc/Wrapper';
 const Contact = ({ history, location, rootModel }) => {
   return (
     <Wrapper history={history} rootModel={rootModel} location={location}>
-      CONTACT
+      <div className='screen'></div>
     </Wrapper>
   );
 };

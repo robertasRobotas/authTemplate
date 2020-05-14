@@ -4,7 +4,7 @@ import Wrapper from '../../_hoc/Wrapper';
 const About = ({ history, location, rootModel }) => {
   return (
     <Wrapper history={history} rootModel={rootModel} location={location}>
-      ABOUT
+      <div className='screen'></div>
     </Wrapper>
   );
 };
